@@ -41,8 +41,7 @@ function App() {
   return (
     <>
 //     <Router>
-    <Navbar title = "TextChanger" AboutText = "About TextChanger" mode={mode}
-    toggleMode={toggleMode}/>
+    <Navbar title = "TextChanger"  mode={mode} toggleMode={toggleMode}/>
     <Alert alert = {alert} />
     <div className="container my-3">
       <TextForm showAlert = {showAlert}heading = "Enter Text to analyze below "mode={mode}  />
