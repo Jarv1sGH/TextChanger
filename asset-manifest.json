@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TetxChanger/static/css/main.abd64e84.css",
-    "main.js": "/TetxChanger/static/js/main.91f1c4ab.js",
-    "static/js/787.28cb0dcd.chunk.js": "/TetxChanger/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/TetxChanger/index.html",
-    "main.abd64e84.css.map": "/TetxChanger/static/css/main.abd64e84.css.map",
-    "main.91f1c4ab.js.map": "/TetxChanger/static/js/main.91f1c4ab.js.map",
-    "787.28cb0dcd.chunk.js.map": "/TetxChanger/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/TextChanger/static/css/main.abd64e84.css",
+    "main.js": "/TextChanger/static/js/main.07d99340.js",
+    "static/js/787.28cb0dcd.chunk.js": "/TextChanger/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/TextChanger/index.html",
+    "main.abd64e84.css.map": "/TextChanger/static/css/main.abd64e84.css.map",
+    "main.07d99340.js.map": "/TextChanger/static/js/main.07d99340.js.map",
+    "787.28cb0dcd.chunk.js.map": "/TextChanger/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.91f1c4ab.js"
+    "static/js/main.07d99340.js"
   ]
 }
