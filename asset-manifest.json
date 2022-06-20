@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TetxChanger/static/css/main.abd64e84.css",
+    "main.js": "/TetxChanger/static/js/main.91f1c4ab.js",
+    "static/js/787.28cb0dcd.chunk.js": "/TetxChanger/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/TetxChanger/index.html",
+    "main.abd64e84.css.map": "/TetxChanger/static/css/main.abd64e84.css.map",
+    "main.91f1c4ab.js.map": "/TetxChanger/static/js/main.91f1c4ab.js.map",
+    "787.28cb0dcd.chunk.js.map": "/TetxChanger/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.91f1c4ab.js"
+  ]
+}
