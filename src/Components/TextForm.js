@@ -23,7 +23,7 @@ export default function TextForm (props){
         text.select();
         text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
-      //   props.showAlert("Copied to clipboard!", "success");
+        props.showAlert("Copied to clipboard!", "success");
      }
      const handleExtraSpaces = () =>{
         let newText= text.split(/[ ]+/);
