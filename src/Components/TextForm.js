@@ -1,34 +1,31 @@
 import React, {useState} from 'react'
 
 export default function TextForm (props){
-   
+  
     const handleUpperCase=()=>{
        let newText = text.toUpperCase();
        setText(newText);
-      //  props.showAlert("Converted to Uppercase!", "success");
+       props.showAlert("Converted to Uppercase!", "success");
     }
     const handleLowerCase=()=>{
         let newText = text.toLowerCase();
         setText(newText);
-      //   props.showAlert("Converted to Lowercase!", "success");
+        props.showAlert("Converted to Lowercase!", "success");
      }
      
      const handleClear=()=>{
         let newText = '';
         setText(newText);
-      //   props.showAlert("Cleared!", "success");
+        props.showAlert("Cleared!", "success");
      }
      const handleCopy = ()=>{
-        let text = document.getElementById("myBox");
-        text.select();
-        text.setSelectionRange(0,9999);
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied to clipboard!", "success");
      }
      const handleExtraSpaces = () =>{
         let newText= text.split(/[ ]+/);
         setText(newText.join(" "));
-      //   props.showAlert("Extra Spaces Removed!", "success");
+        props.showAlert("Extra Spaces Removed!", "success");
      }
 
 
@@ -49,39 +46,22 @@ export default function TextForm (props){
          }}>
          </textarea>
         </div>  
-        <button className="btn btn-primary mx-2" onClick={handleUpperCase} >UpperCase </button>
-        <button className="btn btn-primary mx-2" onClick={handleLowerCase} >LowerCase </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces} > Remove Extra Spaces </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy} >Copy </button>
-        <button className="btn btn-primary mx-2" onClick={handleClear} >Clear All </button>
+        <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpperCase} >UpperCase </button>
+        <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleLowerCase} >LowerCase </button>
+        <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces} > Remove Extra Spaces </button>
+        <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopy} >Copy </button>
+        <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleClear} >Clear All </button>
     </div>
-   {/* This is to add a dropdown menu for multiple buttons using if-else  */}
-
-    {/* <div className="Selcontainer"style={{color:props.mode==='dark'?'white':'black' }} >
-    <label id="label" htmlFor="mySelect">  Select Your Function Here  </label>
-
-         <select name="mySelect" id="select" style={{
-            backgroundColor: props.mode==='dark'?'#343a40':'white',
-            color:props.mode==='dark'?'white':'black'
-         }}>
-            
-         <option  value="">select</option>   
-         <option value="UpperCase" >UpperCase</option>
-         <option value="LowerCase">LowerCase</option>
-         <option value="Clear">Clear</option>
-         </select> 
-    </div> */} 
-  
     <div className="container my-2"style={{
             color:props.mode==='dark'?'white':'black'
          }}>
         <h1>Your Text Summary</h1>
-        <p> {text.split(" ").length-1} word and {text.length} characters</p>
-        <p> {0.008 * (text.split(" ").length-1)} Minute Read</p>
+        <p> {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} word and {text.length} characters</p>
+        <p> {0.008 * (text.split(" ").filter((element)=>{return element.length!==0}).length)} Minute Read</p>
         <h3> Preview </h3>
-        <p>{text.length>0?text:"Enter your text to preview it here"}</p>
+        <p>{text.length>0?text:"Nothing to Preview "}</p>
     </div>
 
     </>
   )
-}
+}  
